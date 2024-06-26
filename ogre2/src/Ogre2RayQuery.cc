@@ -201,8 +201,8 @@ RayQueryResult Ogre2RayQuery::ClosestPointByIntersection()
   // Iterate over all the results.
   for (auto iter = ogreResult.begin(); iter != ogreResult.end(); ++iter)
   {
-    if (iter->distance <= 0.0)
-      continue;
+    // if (iter->distance <= 0.0)
+    //   continue;
 
     if (!iter->movable || !iter->movable->getVisible())
       continue;
