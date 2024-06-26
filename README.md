@@ -1,5 +1,19 @@
 # Gazebo Rendering: Rendering library for robot applications
 
+# NOTE:
+# This is Modified Igntion Rendering Library
+
+Major modification is to the RayQuery Class.
+made changes to the ClosestPointByIntersection method. Earlier the method would filter the visual objects first based on the Oriented bounding box. This was an issue as if we had the robot inside another bounding box the ray would just pass through. This change removes the fiter, now the ray will chekc collision with all the objects even if the Oriented Bounding boxes are intersecting
+
+<hr>
+
+Also the Version Number of the Plugin has been changed to 6.6.4 
+(Ideally we would want to change the name of the plugin But for somme reason changing the name of the plugin casues cmake build errors)
+(When Building against igntion rendering code, Make sure to use the exact version number to find this version of the library)
+
+
+
 **Maintainer:** ichen [AT] openrobotics [DOT] org
 
 [![GitHub open issues](https://img.shields.io/github/issues-raw/gazebosim/gz-rendering.svg)](https://github.com/gazebosim/gz-rendering/issues)
